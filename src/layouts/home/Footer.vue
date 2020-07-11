@@ -19,7 +19,7 @@
                 white
                 small
                 color="white"
-                class="blue--text pa-1 pa-md-0"
+                class="accent--text pa-1 pa-md-0"
                 href="#"
                 v-text="s"
               />
@@ -37,7 +37,7 @@
         </v-col>
 
         <v-col
-          class="text-center blue--text text-md-right"
+          class="text-center accent--text text-md-right"
           cols="12"
           md="6"
         >

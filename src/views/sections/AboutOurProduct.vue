@@ -8,7 +8,6 @@
         outlined
         large
         fab
-        color="blue"
       >
         <v-icon>mdi-pencil</v-icon>
       </v-btn>

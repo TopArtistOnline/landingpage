@@ -4,6 +4,7 @@ import {
     upperFirst,
 } from 'lodash'
 
+// eslint-disable-next-line space-before-function-paren
 export default function(sections = []) {
     return {
         name: 'LoadSections',
@@ -13,13 +14,13 @@ export default function(sections = []) {
         // Promise.
         components: sections.reduce((acc, cur) => {
             const name = upperFirst(camelCase(cur))
-
             acc[`Section${name}`] = () =>
+                // eslint-disable-next-line func-call-spacing
                 import (`@/views/sections/${name}.vue`)
-
             return acc
         }, {}),
 
         data: () => ({ sections }),
     }
+    // eslint-disable-next-line eol-last
 }

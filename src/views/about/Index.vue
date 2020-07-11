@@ -15,7 +15,7 @@
     mixins: [
       LoadSections([
         'carousel',
-        'theme-features',
+        'thats-right',
       ]),
     ],
 

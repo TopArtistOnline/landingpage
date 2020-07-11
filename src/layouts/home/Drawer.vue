@@ -19,7 +19,7 @@
         :key="name"
         :to="{ name }"
         :exact="name === 'Home'"
-        color="primary"
+        color="accent"
       >
         <v-list-item-content>
           <v-list-item-title v-text="name" />

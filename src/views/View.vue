@@ -22,7 +22,7 @@
         default: 'view',
       },
     },
- 
+
     data: () => ({ sections: [] }),
   }
 </script>

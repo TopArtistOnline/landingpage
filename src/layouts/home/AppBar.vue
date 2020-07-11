@@ -26,8 +26,8 @@
             :exact="name === 'Home'"
             :ripple="false"
             color="purple"
-            active-class="text--primary"
-            class="font-weight-bold blue--text"
+            active-class="accent--text"
+            class="font-weight-bold accent--text"
             min-width="96"
           >
             {{ name }}

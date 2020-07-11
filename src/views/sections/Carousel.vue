@@ -1,7 +1,7 @@
 <template>
   <v-theme-provider>
     <section id="carousel">
-      <v-carousel height="350">
+      <v-carousel height="250">
         <v-carousel-item
           v-for="(caritem,cari) in caritems"
           :key="cari"
@@ -24,7 +24,7 @@
               />
 
               <base-divider
-                color="primary"
+                color="accent"
                 dense
               />
 
@@ -81,7 +81,7 @@
 
     computed: {
       gradient () {
-        const color = `${this.$vuetify.theme.themes.light.secondary}CC`
+        const color = `${this.$vuetify.theme.themes.light.accent}CC`
         const overlay = RGBAtoCSS(HexToRGBA(color))
 
         return `to top, ${overlay}, ${overlay}`

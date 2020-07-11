@@ -18,7 +18,7 @@
         <v-col
           v-for="(feature) in features"
           :key="feature"
-          md="6"
+          md="2"
         >
           <base-avatar-card-personalizada
             v-bind="feature"

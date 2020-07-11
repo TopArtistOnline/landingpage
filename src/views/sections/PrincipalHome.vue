@@ -2,17 +2,19 @@
   <section id="principal-home">
     <v-img
       :min-height="minHeight"
-      :src="require('@/assets/img/landing-home.png')" 
-      class="white--text"
+      :src="require('@/assets/backgrounds/background_desktop.png')"
+      color="primary"
     >
-      <v-container class="fill-height px-4 py-12">
+      <v-container class="px-4 py-4">
         <v-responsive
           class="d-flex align-center"
           height="100%"
           max-width="700"
           width="100%"
         >
-          <base-heading title="Welcome to Artist Online" />
+          <base-heading
+            title="Welcome to Artist Online"
+          />
 
           <base-body>
             Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality.
@@ -28,14 +30,9 @@
               Free Trial
             </base-btn>
 
-            <span class="font-weight-bold ml-6 mr-4 my-4">or</span>
+            <span class="teal--text ml-6 mr-4 my-4" />
 
-            <base-btn
-              :ripple="false"
-              class="pa-1"
-              height="auto"
-              text
-            >
+            <base-btn>
               Join Us
             </base-btn>
           </div>
