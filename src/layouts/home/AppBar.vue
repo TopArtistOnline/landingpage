@@ -8,7 +8,7 @@
       height="80"
     >
       <base-img
-        :src="require('@/assets/img/logo-top-artist-online.png')"
+        :src="require('@/assets/logos/top_final_blanco.svg')"
         contain
         max-width="128"
         width="100%"
