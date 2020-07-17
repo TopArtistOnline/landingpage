@@ -1,55 +1,91 @@
 <template>
   <v-theme-provider>
     <section id="carousel">
-      <v-carousel height="250">
-        <v-carousel-item
-          v-for="(caritem,cari) in caritems"
-          :key="cari"
-          :src="caritem.src"
-          max-width="100%"
-          reverse-transition="fade-transition"
-          transition="fade-transition"
+      <v-row
+        justify="center"
+      >
+        <base-crown-title
+          v-bind="crowntitle"
+          horizontal
+        />
+        <v-col
+          v-for="(crowntitle) in crowntitles"
+          :key="crowntitle"
+          md="2"
         >
-          <v-row
-            v-if="title"
-            align="center"
-            class="ma-0 text-center"
-            justify="center"
+          <base-crown-title
+            v-bind="crowntitle"
+            horizontal
+          />
+        </v-col>
+      </v-row>
+
+      <carousel
+        class="margin-carousel"
+        :per-page="2"
+        :navigate-to="someLocalProperty"
+        :mouse-drag="true"
+        :autoplay="true"
+        :scroll-per-page="true"
+        pagination-active-color="#115D74"
+        :loop="true"
+        :navigation-enabled="true"
+      >
+        <slide
+          v-for="(cardi) in caritems"
+          :key="cardi"
+          data-index="0"
+          data-name="MySlideName"
+          @slideclick="handleSlideClick"
+        >
+          <v-card
+            class="mx-auto"
+            max-width="100%"
+            color="accent white"
           >
-            <v-col cols="12">
-              <base-heading
-                :title="title"
-                space="2"
-                weight="500"
+            <v-list-item two-line>
+              <v-img
+                :src="cardi.src"
+                height="220"
+                width="150"
               />
-
-              <base-divider
-                color="accent"
-                dense
-              />
-
-              <v-breadcrumbs
-                :items="items"
-                class="justify-center pa-0"
-                divider=">"
-              />
-            </v-col>
-          </v-row>
-        </v-carousel-item>
-      </v-carousel>
+              <v-list-item-content>
+                <v-list-item-title
+                  class="headline mb-1 white--text"
+                  v-text="cardi.title"
+                />
+                <v-list-item-subtitle
+                  class="secondary--text"
+                  v-text="cardi.subtitle"
+                />
+              </v-list-item-content>
+            </v-list-item>
+          </v-card>
+        </slide>
+      </carousel>
     </section>
   </v-theme-provider>
 </template>
 
 <script>
+
   // Components
   import {
     HexToRGBA,
     RGBAtoCSS,
   } from 'vuetify/lib/util/colorUtils'
+  import {
+    Carousel,
+    Slide,
+  } from 'vue-carousel'
 
   export default {
     name: 'SectionCarousel',
+
+    components: {
+      Carousel,
+      Slide,
+    },
 
     metaInfo () {
       return {
@@ -63,41 +99,50 @@
 
     data: () => ({
       title: '',
+      crowntitles: [
+        {
+          src: '/logos/cup.svg',
+          title: 'Testimonials',
+        },
+      ],
       caritems: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          src: require('@/assets/carousel/slider_01.png'),
+          title: 'Marty Music',
+          subtitle: 'A no brainer investment for anyone who wants to learn pr teach music....',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src: require('@/assets/carousel/slider_02.png'),
+          title: 'Rob Scalon',
+          subtitle: 'A no brainer investment for anyone who wants to learn pr teach music....',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src: require('@/assets/carousel/slider_01.png'),
+          title: 'Marty Music',
+          subtitle: 'A no brainer investment for anyone who wants to learn pr teach music....',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: require('@/assets/carousel/slider_02.png'),
+          title: 'Rob Scalon',
+          subtitle: 'A no brainer investment for anyone who wants to learn pr teach music....',
+        },
+        {
+          src: require('@/assets/carousel/slider_01.png'),
+          title: 'Marty Music',
+          subtitle: 'A no brainer investment for anyone who wants to learn pr teach music....',
+        },
+        {
+          src: require('@/assets/carousel/slider_02.png'),
+          title: 'Rob Scalon',
+          subtitle: 'A no brainer investment for anyone who wants to learn pr teach music....',
         },
       ],
     }),
-
-    computed: {
-      gradient () {
-        const color = `${this.$vuetify.theme.themes.light.accent}CC`
-        const overlay = RGBAtoCSS(HexToRGBA(color))
-
-        return `to top, ${overlay}, ${overlay}`
-      },
-      items () {
-        return [
-          { text: 'HOME', to: '/' },
-          { text: this.title },
-        ]
-      },
-    },
   }
 </script>
 
-<style lang="sass">
-  #hero-alt
-    .v-breadcrumbs__item
-      color: #FFFFFF
+<style scoped>
+.margin-carousel{
+  margin-bottom: 0px;
+}
 </style>

@@ -2,7 +2,6 @@
   <v-footer
     id="home-footer"
     color="white"
-    dark
     min-height="72"
   >
     <v-container>
@@ -12,18 +11,16 @@
           md="6"
         >
           <div class="d-flex flex-wrap justify-md-start justify-center justify-md-none">
-            <template v-for="(s, i) in downloads">
-              <a
+            <template v-for="s in downloads">
+              <v-btn
                 :key="s"
-                fab
-                white
-                small
-                color="white"
-                class="accent--text pa-1 pa-md-0"
-                href="#"
-                v-text="s"
-              />
-
+                class="mx-2"
+                v-bind="s"
+                large
+                text
+              >
+                <v-icon size="50">{{ s }}</v-icon>
+              </v-btn>
               <v-responsive
                 v-if="i < downloads.length - 1"
                 :key="`divider-${s}`"
@@ -54,16 +51,21 @@
 
     data: () => ({
       downloads: [
-        'Android',
-        'Ios',
-        'Desktop',
-        'Facebook',
+        'mdi-android',
+        'mdi-apple',
+        'mdi-monitor-speaker',
       ],
     }),
   }
 </script>
 
 <style lang="sass">
+
+  .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined)
+    background-color: transparent
+
+  .theme--light.v-btn
+    color: #115D74
   #home-footer a
     text-decoration: none
 </style>

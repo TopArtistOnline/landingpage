@@ -25,9 +25,8 @@
             :to="{ name }"
             :exact="name === 'Home'"
             :ripple="false"
-            color="purple"
             active-class="accent--text"
-            class="font-weight-bold accent--text"
+            class="b accent--text"
             min-width="96"
           >
             {{ name }}
@@ -39,7 +38,7 @@
               hide-details
               solo-inverted
               style="max-width: 300px;"
-              background-color="blue lighten-5"
+              background-color="teal lighten-5"
             />
           </v-tab>
         </v-tabs>
@@ -88,4 +87,15 @@
     .v-tab
       &::before
         display: none
+
+    .theme--light.v-text-field--solo-inverted.v-input--is-focused > .v-input__control > .v-input__slot input
+      color: #115D74
+    .body
+    font-family: 'Lato bold', sans-serif
+
+    .h1
+    font-family: 'Lato', sans-serif
+
+    a.fon
+
 </style>

@@ -12,14 +12,13 @@
           max-width="700"
           width="100%"
         >
-          <base-heading
-            title="Welcome to Artist Online"
-          />
-
-          <base-body>
-            Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality.
-            incubator seed round massmarket.
-            buyer agile development growth hacking business-to-consumer ecosystem
+          <h1 class="accent--text display-2 my-3">
+            Welcome to<span class="font-weight-black">Top Artist Online</span>
+          </h1>
+          <span class="accent--text display-1">The place where everbody Learn n' Earns!</span>
+          <base-body class="my-3">
+            Join us now and start reaping the benefits
+            from being part of our ever growing community
           </base-body>
 
           <div

@@ -8,7 +8,7 @@
         color="#45516b"
         flat
         max-width="100%"
-        tile 
+        tile
       >
         <v-row
           v-if="title"

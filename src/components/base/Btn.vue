@@ -4,6 +4,7 @@
     :depressed="depressed"
     :min-width="minWidth"
     :tile="tile"
+    :rounded="rounded"
     class="font-weight-bold"
     x-large
     v-bind="$attrs"
