@@ -90,12 +90,11 @@
 
     .theme--light.v-text-field--solo-inverted.v-input--is-focused > .v-input__control > .v-input__slot input
       color: #115D74
-    .body
-    font-family: 'Lato bold', sans-serif
 
-    .h1
-    font-family: 'Lato', sans-serif
+    body
+      font-family: 'Lato bold', sans-serif
 
-    a.fon
+    h1
+      font-family: 'Lato', sans-serif
 
 </style>
