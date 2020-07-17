@@ -68,7 +68,6 @@
 </template>
 
 <script>
-
   // Components
   import {
     Carousel,
@@ -138,7 +137,5 @@
 </script>
 
 <style scoped>
-.margin-carousel{
-  margin-bottom: 0px;
-}
+
 </style>
