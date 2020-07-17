@@ -2,10 +2,14 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib/framework'
 import { VCol, VRow } from 'vuetify/lib'
+// libreria para el carousel multiple
+import VueCarousel from 'vue-carousel'
+
 Vue.use(Vuetify, {
     components: {
         VCol,
         VRow,
+        VueCarousel,
     },
 })
 export default new Vuetify({

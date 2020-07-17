@@ -1,27 +1,37 @@
-$body-font-family: 'PT Sans', sans-serif;
-$heading-font-family: 'Work Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+$body-font-family: 'Lato',
+sans-serif;
+$heading-font-family: 'Work Sans',
+sans-serif;
+$headings: ( 'h1': ( 'letter-spacing': 6rem, 'weight': 300),
+'h2': ( 'letter-spacing': 3.75rem, 'weight': 150),
+'h4': ( 'letter-spacing': 0.1875rem, 'weight': 900),
+'h5': ( 'letter-spacing': 0.1875rem, 'weight': 700),
+'h6': ( 'letter-spacing': 0.1875rem, 'size': 1rem, 'weight': 700),
+'subtitle-1': ( 'letter-spacing': 0.1875rem, ),
+'subtitle-2': ( 'letter-spacing': 0.1875rem, ),
+'body-1': ( 'size': .9375rem, ));
+.VueCarousel-slide {
+    position: relative;
+    background: #115D74;
+    color: #fff;
+    font-family: Arial;
+    font-size: 24px;
+    text-align: center;
+    min-height: 100px;
+}
 
-$headings: (
-  'h4': (
-    'letter-spacing': 0.1875rem,
-    'weight': 900
-  ),
-  'h5': (
-    'letter-spacing': 0.1875rem,
-    'weight': 700
-  ),
-  'h6': (
-    'letter-spacing': 0.1875rem,
-    'size': 1rem,
-    'weight': 700
-  ),
-  'subtitle-1': (
-    'letter-spacing': 0.1875rem,
-  ),
-  'subtitle-2': (
-    'letter-spacing': 0.1875rem,
-  ),
-  'body-1': (
-    'size': .9375rem,
-  )
-);
+.label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+element.style {
+    margin-top: 2px;
+    padding: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: #115D74;
+}
