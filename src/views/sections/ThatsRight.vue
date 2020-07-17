@@ -116,13 +116,6 @@ c<template>
 </style>
 
 <style scoped>
-  body {
-    font-family: 'Lato', sans-serif;
-}
-
-h1 {
-    font-family: 'Lato bold', sans-serif;
-}
  .background{
    height: 520px;
    width: 100%;
