@@ -71,10 +71,6 @@
 
   // Components
   import {
-    HexToRGBA,
-    RGBAtoCSS,
-  } from 'vuetify/lib/util/colorUtils'
-  import {
     Carousel,
     Slide,
   } from 'vue-carousel'
