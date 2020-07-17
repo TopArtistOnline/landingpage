@@ -19,7 +19,9 @@
                 large
                 text
               >
-                <v-icon size="50">{{ s }}</v-icon>
+                <v-icon size="50">
+                  {{ s }}
+                </v-icon>
               </v-btn>
               <v-responsive
                 v-if="i < downloads.length - 1"
