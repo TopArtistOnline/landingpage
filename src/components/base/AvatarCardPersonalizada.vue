@@ -1,36 +1,73 @@
+<style scoped>
+  .container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+      -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+.container span{
+  position:absolute;
+  font-size: 0.9em;
+  padding: 1.8em 2em 1.7em 2em !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.container img{
+  width: 115%;
+  height: 115%;
+  margin-top: 1.1em;
+  margin-left:-0.2em;
+}
+
+.v-btn{
+  white-space: normal;
+  word-wrap: break-word;
+  transition: all 100ms ease-in-out;
+}
+.v-btn:hover{
+  filter: brightness(1.15);
+}
+</style>
 <template>
-  <div
-    :class="classes"
-    class="pt-2"
-  >
-    <base-avatar-personalizada
-      v-if="icon"
-      :color="color"
-      :dark="dark"
-      :icon="icon"
-      :outlined="outlined"
-      :size="size"
-      class="mb-3"
-    />
-
-    <div :class="horizontal && title && 'ml-6'">
-      <base-title
-        :title="title"
-        class="text-uppercase"
-        space="3"
-      />
-
-      <base-body
-        v-if="text || $slots.default"
-        :space="horizontal ? 0 : undefined"
-        :text="text"
-        class="mx-auto"
-        max-width="700"
-      >
-        <slot />
-      </base-body>
-    </div>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col>
+        <div
+          :class="classes"
+          class="base-avatar d-inline-flex"
+        >
+          <v-btn
+            icon
+            flat
+            height="98"
+            width="98"
+            class="bnt"
+            style="margin:-1em;"
+          >
+            <v-avatar
+              :size="size"
+            >
+              <div class="container">
+                <center>
+                  <img
+                    :src="require('@/assets'+src)"
+                  >
+                </center>
+              </div>
+              <span class="white--text">{{ title }}</span>
+            </v-avatar>
+          </v-btn>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -50,38 +87,35 @@
       color: String,
       dark: Boolean,
       horizontal: Boolean,
-      icon: String,
-      outlined: {
-        type: Boolean,
-        default: true,
-      },
       space: {
         type: [Number, String],
-        default: 8,
+        default: 6,
       },
       size: {
         type: [Number, String],
-        default: 90,
+        default: 120,
       },
       text: String,
       title: String,
+      src: String,
     },
 
     computed: {
       classes () {
-        const classes = [
-          `mb-${this.space}`,
+        return [
+          this.outlined && 'base-avatar--outlined',
         ]
+      },
+      outlineSize () {
+        return Number(this.size) + (this.size / this.multiply)
+      },
+      styles () {
+        const margin = this.size / (this.multiply * 2)
 
-        if (this.horizontal) {
-          classes.push('d-flex')
-
-          if (!this.$slots.default && !this.text) {
-            classes.push('align-center')
-          }
+        return {
+          // Aligns the outline content with the content
+          margin: `-${margin}px 0 0 -${margin}px`,
         }
-
-        return classes
       },
     },
   }
