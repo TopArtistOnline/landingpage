@@ -93,7 +93,7 @@
       },
       size: {
         type: [Number, String],
-        default: 120,
+        default: 140,
       },
       text: String,
       title: String,
