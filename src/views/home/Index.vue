@@ -17,7 +17,7 @@
       LoadSections([
         'principal-home',
         // 'contact-us',
-        // 'theme-features',
+        // 'resources',
         // 'features',
         // 'affiliates',
         // 'social-media',

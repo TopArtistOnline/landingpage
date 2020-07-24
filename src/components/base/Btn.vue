@@ -8,6 +8,7 @@
     class="font-weight-bold"
     x-large
     v-bind="$attrs"
+    :to="link"
     v-on="$listeners"
   >
     <slot />
@@ -34,6 +35,10 @@
       tile: {
         type: Boolean,
         default: true,
+      },
+      link: {
+        type: String,
+        default: '#',
       },
     },
   }

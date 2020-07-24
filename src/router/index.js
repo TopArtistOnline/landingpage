@@ -41,6 +41,13 @@ const router = new Router({
                             import ('@/views/resource/Index.vue'),
                     },
                     {
+                        path: 'register',
+                        name: 'Register',
+                        component: () =>
+                            // eslint-disable-next-line func-call-spacing
+                            import ('@/views/register/Index.vue'),
+                    },
+                    {
                         path: 'contact-us',
                         name: 'Contact',
                         component: () =>

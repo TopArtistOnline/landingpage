@@ -2,12 +2,12 @@
   .background{
     height: 100%;
     width: 100%;
-    background-image:url('../../assets/elements/microphone.png'), url('../../assets/backgrounds/background_video_reverse.png'), linear-gradient(0deg, rgba(0,130,147,1) 0%, rgba(255,255,255,0) 50%);
-    background-position: left bottom, left bottom;
-    /*-o-background-size:35% auto, 100% auto;
-    -webkit-background-size:35% auto;
-    -moz-background-size:35% auto;*/
-    background-size: auto 45vmax , auto 45vmax, 100% auto;
+    background-image:url('../../assets/elements/microphone.png'), url('../../assets/logos/TAO_ISOTIPO_CUT.svg'), url('../../assets/backgrounds/background_video_reverse.png'), linear-gradient(0deg, rgba(0,130,147,1) 0%, rgba(255,255,255,0) 50%);
+    background-position: left bottom, right bottom, left bottom;
+    background-size:40em auto , 30em auto, 80em auto, 100% auto;
+    -webkit-background-size:40em auto , 30em auto, 80em auto, 100% auto;;
+    -moz-background-size:40em auto , 30em auto, 80em auto, 100% auto;;
+    background-size: 40em auto , 30em auto, 80em auto, 100% auto;
     background-repeat: no-repeat;
   }
   .space{
@@ -17,13 +17,13 @@
     background-color:#115D74;
     width: 100%;
     height: 0.8em;
-    margin-left:3em;
+    margin:0 0 2.5% 3em;
   }
 
   .svg-icon{
     position: absolute;
-    right: -10%;
-    bottom: -5%;
+    right: 0;
+    bottom: 0;
     width: 32vmax;
     filter: invert(26%) sepia(49%) saturate(770%) hue-rotate(147deg) brightness(100%) contrast(92%) opacity(0.15);
   }
@@ -40,7 +40,7 @@
     class="background"
   >
     <v-img
-      :src="require('@/assets/logos/TAO_ISOTIPO.svg')"
+      :src="require('@/assets/logos/TAO_ISOTIPO_CUT.svg')"
       class="svg-icon"
     />
     <v-container>
@@ -64,7 +64,9 @@
     />
 
     <v-container>
-      <v-row>
+      <v-row
+        style="margin:2.5% 0 2.5% 0"
+      >
         <v-col
           cols="5"
           sm="5"
@@ -92,7 +94,10 @@
           >Learning</span>
         </v-col>
       </v-row>
-      <v-row class="space">
+      <v-row
+        class="space"
+        style="margin:2.5% 0 2.5% 0"
+      >
         <v-col
           v-for="(lesson) in lessons"
           :key="lesson"
@@ -105,11 +110,14 @@
           />
         </v-col>
       </v-row>
-      <v-row>
+      <v-row
+        style="margin:2.5% 0 2.5% 0"
+      >
         <v-col
           cols="5"
           sm="5"
           md="8"
+          style="margin:2.5% 0 2.5% 0"
         />
         <v-col>
           <span
@@ -118,7 +126,9 @@
           >and more...</span>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row
+        style="margin:2.5% 0 2.5% 0"
+      >
         <v-col
           cols="5"
           sm="5"
