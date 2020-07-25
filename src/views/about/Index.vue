@@ -14,7 +14,7 @@
 
     mixins: [
       LoadSections([
-        'carousel',
+        'about-carousel',
         'about-thats-right-video',
       ]),
     ],

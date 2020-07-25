@@ -1,6 +1,6 @@
 <template>
   <v-theme-provider>
-    <section id="carousel">
+    <section id="about-carousel">
       <v-row
         justify="center"
       >
@@ -12,24 +12,24 @@
           v-for="(crowntitle) in crowntitles"
           :key="crowntitle"
           md="2"
+          class="container"
         >
           <base-crown-title
             v-bind="crowntitle"
+            class="text-center"
             horizontal
           />
         </v-col>
       </v-row>
-
       <carousel
-        class="margin-carousel"
-        :per-page="2"
-        :navigate-to="someLocalProperty"
-        :mouse-drag="true"
         :autoplay="true"
-        :scroll-per-page="true"
-        pagination-active-color="#115D74"
+        :autoplay-timeout="4000"
+        navigation-enabled="true"
+        :navigate-to="someLocalProperty"
         :loop="true"
-        :navigation-enabled="true"
+        :per-page-custom="perPageCustom"
+        pagination-active-color="#115D74"
+        pagination-position="bottom-overlay"
       >
         <slide
           v-for="(cardi) in caritems"
@@ -39,23 +39,25 @@
           @slideclick="handleSlideClick"
         >
           <v-card
-            class="mx-auto"
+            class="card-slide mx-auto"
             max-width="100%"
-            color="accent white"
+            color="white"
+            tile
           >
             <v-list-item two-line>
               <v-img
                 :src="cardi.src"
-                height="220"
+                min-height="100px"
+                max-height="100%"
                 width="150"
               />
               <v-list-item-content>
                 <v-list-item-title
-                  class="headline mb-1 white--text"
+                  class="headline mb-1 white--text ml-4"
                   v-text="cardi.title"
                 />
                 <v-list-item-subtitle
-                  class="secondary--text"
+                  class="item-subtitule secondary--text my-2 ml-4"
                   v-text="cardi.subtitle"
                 />
               </v-list-item-content>
@@ -82,18 +84,17 @@
       Slide,
     },
 
-    metaInfo () {
-      return {
-        changed: meta => (this.title = meta.titleChunk.toUpperCase()),
-      }
-    },
-
     provide: {
       heading: { align: 'center' },
     },
 
     data: () => ({
       title: '',
+      perPageCustom:
+        [
+          // array para el tamaño de slides
+          [480, 1], [600, 1], [790, 1], [960, 2], [1264, 2],
+        ],
       crowntitles: [
         {
           src: '/logos/cup.svg',
@@ -135,3 +136,23 @@
     }),
   }
 </script>
+<style scoped>
+ .v-sheet.v-card:not(.v-sheet--outlined){
+   box-shadow: none;
+ }
+ .container{
+    margin: .0em;
+    display: flex;
+    text-align: center;
+}
+.card-slide{
+  background:linear-gradient(to bottom, #ffffff 10%, #115D74 10%, #115D74 90%, #115D74 90%, #ffffff 90%, #ffffff 100%) !important;
+}
+.item-subtitule{
+  white-space: normal;
+  word-wrap: break-word;
+  text-overflow:clip;
+  font-family: cursive;
+  font-size: large;
+}
+</style>

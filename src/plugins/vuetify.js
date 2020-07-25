@@ -1,9 +1,14 @@
+/* eslint-disable semi */
 //
-import Vue from 'vue'
-import Vuetify from 'vuetify/lib/framework'
-import { VCol, VRow } from 'vuetify/lib'
+// eslint-disable-next-line semi
+import Vue from 'vue';
+// eslint-disable-next-line semi
+import Vuetify from 'vuetify/lib/framework';
+// eslint-disable-next-line semi
+import { VCol, VRow } from 'vuetify/lib';
 // libreria para el carousel multiple
-import VueCarousel from 'vue-carousel'
+// eslint-disable-next-line semi
+import VueCarousel from 'vue-carousel';
 
 Vue.use(Vuetify, {
     components: {
@@ -11,7 +16,8 @@ Vue.use(Vuetify, {
         VRow,
         VueCarousel,
     },
-})
+    // eslint-disable-next-line semi
+});
 export default new Vuetify({
     theme: {
         dark: false,
@@ -25,4 +31,4 @@ export default new Vuetify({
         },
     },
     // eslint-disable-next-line eol-last
-})
+});

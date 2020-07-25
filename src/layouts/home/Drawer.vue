@@ -4,7 +4,7 @@
     color="transparent"
     fixed
     height="auto"
-    overlay-color="secondary"
+    overlay-color="accent"
     overlay-opacity=".8"
     temporary
     v-bind="$attrs"
@@ -22,7 +22,10 @@
         color="accent"
       >
         <v-list-item-content>
-          <v-list-item-title v-text="name" />
+          <v-list-item-title
+            class="accent--text"
+            v-text="name"
+          />
         </v-list-item-content>
       </v-list-item>
     </v-list>
