@@ -2,7 +2,7 @@
   .background{
     height: 100%;
     width: 100%;
-    background-image:url('../../assets/elements/microphone.png'), url('../../assets/logos/TAO_ISOTIPO_CUT.svg'), url('../../assets/backgrounds/background_video_reverse.png'), linear-gradient(0deg, rgba(0,130,147,1) 0%, rgba(255,255,255,0) 50%);
+    background-image:url('../../assets/elements/microphone.png'), url('../../assets/logos/tao_isotipo_cut.svg'), url('../../assets/backgrounds/background_video_reverse.png'), linear-gradient(0deg, rgba(0,130,147,1) 0%, rgba(255,255,255,0) 50%);
     background-position: left bottom, right bottom, left bottom;
     background-size:40em auto , 30em auto, 80em auto, 100% auto;
     -webkit-background-size:40em auto , 30em auto, 80em auto, 100% auto;;
@@ -20,13 +20,6 @@
     margin:0 0 2.5% 3em;
   }
 
-  .svg-icon{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 32vmax;
-    filter: invert(26%) sepia(49%) saturate(770%) hue-rotate(147deg) brightness(100%) contrast(92%) opacity(0.15);
-  }
   .svg-icon-2{
     filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(115deg) brightness(108%) contrast(108%);
     width:2.8em;
@@ -39,10 +32,6 @@
     id="theme-features"
     class="background"
   >
-    <v-img
-      :src="require('@/assets/logos/TAO_ISOTIPO_CUT.svg')"
-      class="svg-icon"
-    />
     <v-container>
       <v-row>
         <v-col
