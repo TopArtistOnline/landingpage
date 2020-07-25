@@ -20,8 +20,8 @@
           optional
         >
           <v-tab
-            v-for="(name, navi) in navitems"
-            :key="navi"
+            v-for="(name, i) in items"
+            :key="i"
             :to="{ name }"
             :exact="name === 'Home'"
             :ripple="false"
@@ -52,7 +52,7 @@
 
     <home-drawer
       v-model="drawer"
-      :navitems="navitems"
+      :items="items"
     />
   </div>
 </template>
@@ -67,7 +67,7 @@
 
     data: () => ({
       drawer: null,
-      navitems: [
+      items: [
         'Home',
         'About',
         'Resources',

@@ -16,15 +16,6 @@
     mixins: [
       LoadSections([
         'principal-home',
-        // 'contact-us',
-        // 'resources',
-        // 'features',
-        // 'affiliates',
-        // 'social-media',
-        // 'keep-in-touch',
-        // 'newsletter',
-        // 'pro-features',
-        // 'info',
       ]),
     ],
 

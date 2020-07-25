@@ -5,20 +5,28 @@
       :src="require('@/assets/backgrounds/background_desktop.png')"
       color="primary"
     >
-      <v-container class="px-4 py-4">
+      <v-container
+        v-for="(crowntitle) in crowntitles"
+        :key="crowntitle"
+        v-bind="crowntitle"
+        class="px-4 py-4"
+      >
         <v-responsive
-          class="d-flex align-center"
-          height="100%"
-          max-width="700"
-          width="100%"
+          class="home"
+          max-width="750"
         >
-          <h1 class="accent--text display-2 my-3">
-            Welcome to<span class="font-weight-black">Top Artist Online</span>
+          <h1
+            class="display-2"
+          >
+            Welcome to <span
+              class="font-weight-black"
+            >{{ crowntitle.title }}</span>
           </h1>
-          <span class="accent--text display-1">The place where everbody Learn n' Earns!</span>
-          <base-body class="my-3">
-            Join us now and start reaping the benefits
-            from being part of our ever growing community
+          <span
+            class="subtitle text-h5"
+          > {{ crowntitle.subtitle }}</span>
+          <base-body class="my-6 text-h6">
+            {{ crowntitle.paragraph }}
           </base-body>
 
           <div
@@ -44,7 +52,15 @@
 <script>
   export default {
     name: 'SectionPrincipalHome',
-
+    data: () => ({
+      crowntitles: [
+        {
+          title: 'Top Artist Online',
+          subtitle: 'The place where everbody Learn Earns!',
+          paragraph: 'Join us now and start reaping the benefits from being part of our ever growing community',
+        },
+      ],
+    }),
     provide: {
       theme: { isDark: true },
     },
@@ -58,3 +74,20 @@
     },
   }
 </script>
+<style scoped>
+h1{
+  color: #115D74;
+  margin: 1px;
+}
+.subtitle{
+  color: #115D74;
+  font-family: 'Lato';
+}
+.home{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  height: auto;
+  width:"100%"
+}
+</style>
