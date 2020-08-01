@@ -1,28 +1,20 @@
 <template>
   <v-theme-provider>
     <section id="about-carousel">
-      <v-row
-        justify="center"
+      <v-container
+        class="center_crown_title"
       >
-        <base-crown-title
-          v-bind="crowntitle"
-          horizontal
-        />
-        <v-col
+        <div
           v-for="(crowntitle) in crowntitles"
           :key="crowntitle"
-          md="2"
-          class="container"
         >
           <base-crown-title
             v-bind="crowntitle"
-            class="text-center"
-            horizontal
           />
-        </v-col>
-      </v-row>
+        </div>
+      </v-container>
       <carousel
-        :autoplay="true"
+        autoplay="true"
         :autoplay-timeout="4000"
         navigation-enabled="true"
         :navigate-to="someLocalProperty"
@@ -41,6 +33,7 @@
           <v-card
             class="card-slide mx-auto"
             max-width="100%"
+            height="100%"
             color="white"
             tile
           >
@@ -49,7 +42,7 @@
                 :src="cardi.src"
                 min-height="100px"
                 max-height="100%"
-                width="150"
+                width="1"
               />
               <v-list-item-content>
                 <v-list-item-title
@@ -93,7 +86,7 @@
       perPageCustom:
         [
           // array para el tamaño de slides
-          [480, 1], [600, 1], [790, 1], [960, 2], [1264, 2],
+          [200, 1], [320, 1], [480, 1], [600, 1], [790, 1], [960, 2], [1264, 2], [1900, 2],
         ],
       crowntitles: [
         {
@@ -141,9 +134,11 @@
    box-shadow: none;
  }
  .container{
-    margin: .0em;
+    margin: 0em;
+    padding: .3em .2em .0em .6em;
     display: flex;
     text-align: center;
+    max-width: 100%;
 }
 .card-slide{
   background:linear-gradient(to bottom, #ffffff 10%, #115D74 10%, #115D74 90%, #115D74 90%, #ffffff 90%, #ffffff 100%) !important;
@@ -151,8 +146,13 @@
 .item-subtitule{
   white-space: normal;
   word-wrap: break-word;
-  text-overflow:clip;
+  text-overflow: clip;
   font-family: cursive;
   font-size: large;
+}
+  .center_crown_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>

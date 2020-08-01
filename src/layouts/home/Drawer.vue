@@ -23,7 +23,7 @@
       >
         <v-list-item-content>
           <v-list-item-title
-            class="accent--text"
+            class="accent--text text-center"
             v-text="name"
           />
         </v-list-item-content>

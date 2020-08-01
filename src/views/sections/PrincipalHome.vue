@@ -1,9 +1,10 @@
 <template>
-  <section id="principal-home">
+  <section
+    id="principal-home"
+    class="background"
+  >
     <v-img
       :min-height="minHeight"
-      :src="require('@/assets/backgrounds/background_desktop.png')"
-      color="primary"
     >
       <v-container
         v-for="(crowntitle) in crowntitles"
@@ -22,6 +23,7 @@
               class="font-weight-black"
             >{{ crowntitle.title }}</span>
           </h1>
+          <span class="text-h4">The place</span>
           <span
             class="subtitle text-h5"
           > {{ crowntitle.subtitle }}</span>
@@ -56,7 +58,7 @@
       crowntitles: [
         {
           title: 'Top Artist Online',
-          subtitle: 'The place where everbody Learn Earns!',
+          subtitle: ' where everbody Learn Earns!',
           paragraph: 'Join us now and start reaping the benefits from being part of our ever growing community',
         },
       ],
@@ -75,6 +77,17 @@
   }
 </script>
 <style scoped>
+  .background
+  {
+    max-width: 100%;
+    background-image:url('../../assets/logos/tao_isotipo_cut_left.svg'), url('../../assets/backgrounds/background_desktop.png'), linear-gradient(0deg, rgba(0,130,147,1) 0%, rgba(255,255,255,0) 50%);
+    background-position: left bottom, right bottom, bottom;
+    -webkit-background-size: contain , contain, 100% auto;
+    -moz-background-size: contain , contain, 100% auto;
+    background-size: contain , contain, 100% auto;
+    background-repeat: no-repeat;
+
+  }
 h1{
   color: #115D74;
   margin: 1px;
