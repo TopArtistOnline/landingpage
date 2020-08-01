@@ -25,6 +25,11 @@
     width:2.8em;
     top:0.2em;
   }
+  .center_crown_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
 
 <template>
@@ -32,20 +37,17 @@
     id="theme-features"
     class="background"
   >
-    <v-container>
-      <v-row>
-        <v-col
-          v-for="(crowntitle) in crowntitles"
-          :key="crowntitle"
-          style="margin:-2.7em 0 -2.7em 0"
-          md="4"
-        >
-          <base-crown-title
-            v-bind="crowntitle"
-            horizontal
-          />
-        </v-col>
-      </v-row>
+    <v-container
+      class="center_crown_title"
+    >
+      <div
+        v-for="(crowntitle) in crowntitles"
+        :key="crowntitle"
+      >
+        <base-crown-title
+          v-bind="crowntitle"
+        />
+      </div>
     </v-container>
 
     <v-img
