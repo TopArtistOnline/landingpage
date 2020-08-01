@@ -20,13 +20,13 @@
             >{{ item.title }}</span>
           </h1>
           <h1 class="h2 subtitle">
-            Here at <span class="font-weight-black">Top Artist Online</span> we believe in sharing and giving back.
+            Here at <span class="h3">Top Artist Online</span> we believe in sharing and giving back.
           </h1>
-          <p class="h2 my-6">
-            {{ item.paragraph }}
+          <p class="h2 my-6 p">
+            Thats why<span class="h3"> you´ll earn money and rewards</span> each and every month in exchange for<span class="h3"> everything you do</span> here with us.
           </p>
-          <p class="h2 my-6">
-            {{ item.paragraph2 }}
+          <p class="h2 my-6 p">
+            Whether you are a content creator<span class="h3"> uploading quality content,</span> an artist setting his/her shop and<span class="h3"> selling their products</span> (physical of digital), an<span class="h3"> online teacher sharing</span> his or her experience and knowledge or simply<span class="h3"> someone who wants to find the best lessons</span> to improve do it fast, this is the place for you!!!
           </p>
         </v-col>
         <v-col md="6">
@@ -39,8 +39,8 @@
               max-width="100%"
               :src="require('@/assets/elements/caratula_video.png')"
             />
-            <v-card-text class="text-center">
-              {{ item.card }}
+            <v-card-text class="text-center font-weight-bold">
+              "As acreator<span class="h3 font-weight-black"> it has given me every tool I need</span> to grown my community fast and get an increasingly strong,<span class="h3 font-weight-black"> consistent income each month,</span>LOVE IT!!"
             </v-card-text>
           </v-card>
         </v-col>
@@ -57,7 +57,7 @@
           title: 'That´s Right',
           subtitle: 'Here at Top Artist Online we believe in sharing and giving back',
           paragraph: 'Thats why you´ll earn money and rewards each and every month in exchange for everything you do here with us.',
-          paragraph2: ' Whether you are a content creator uploading quality content, an \n artist setting his/her shop and selling their products (physical of digital), an online teacher sharing is or her experience and knowledge or simply someone who wants to find the best lessons to improve do it fast, this is the place for you!!!',
+          paragraph2: 'Whether you are a content creator uploading quality content, an artist setting his/her shop and selling their products (physical of digital), an online teacher sharing his or her experience and knowledge or simply someone who wants to find the best lessons to improve do it fast, this is the place for you!!!',
           card: '"As acreator it has given me every tool I need to grown my community fast and get an increasingly strong, consistent income each month, LOVE IT!!"',
         },
       ],
@@ -104,7 +104,9 @@
  }
  .container{
    margin-bottom: -1em;
- }x
+   max-width: 95%;
+   margin-top: 0vmax;
+ }
  .h1{
    color: white;
    font-family: Arial;
@@ -116,10 +118,16 @@
    color: #115D74;
    text-align: center;
  }
+ .h3{
+   font-family: Arial, Helvetica, sans-serif;
+ }
  .fontthat{
    color: white;
    background-color:#115D74;
    padding:0 0.1em 0 0.1em;
+ }
+ .p{
+   font-size: 20px;
  }
 .transparent{
   -webkit-box-shadow: none !important;
