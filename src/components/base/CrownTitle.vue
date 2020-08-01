@@ -1,6 +1,5 @@
 <style scoped>
 .container{
-    margin: 1em;
     display: flex;
 }
 .crown_img{
@@ -26,7 +25,7 @@
     props: {
       align: {
         type: String,
-        default: 'left',
+        default: 'center',
       },
       color: String,
       dark: Boolean,
